@@ -27,12 +27,18 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
         }
 
         return (
-            <div 
-                key={option.value}
-                onClick={() => onSelectedChange(option)} 
-                className="item">
-                { option.label }
-            </div>
+            
+            <React.Fragment>
+                <div 
+                    key={option.value}
+                    onClick={() => onSelectedChange(option)} 
+                    className="item"
+                    style={{color: option.value}}
+                >
+                    { option.label }
+                </div>
+            </React.Fragment>
+                
         );
     });
 
